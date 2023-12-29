@@ -22,6 +22,21 @@ const Header: FC = () => {
 		navigate('/')
 	}
 
+	const routes = [
+		{
+			path: '/home',
+			title: 'Home'
+		},
+		{
+			path: '/transactions',
+			title: 'Transactions'
+		},
+		{
+			path: '/categories',
+			title: 'Categories'
+		}
+	]
+
 	return (
 		<header className='flex items-center bg-slate-800 p-4 shadow-sm backdrop-blur-sm'>
 			<Link to='/'>
@@ -31,36 +46,18 @@ const Header: FC = () => {
 			{isAuth && (
 				<nav className='ml-auto mr-10 '>
 					<ul className='flex items-center gap-5'>
-						<li>
-							<NavLink
-								to='/'
-								className={({ isActive }) =>
-									isActive ? 'text-white' : 'text-white/50'
-								}
-							>
-								Home
-							</NavLink>
-						</li>
-						<li>
-							<NavLink
-								to='/transactions'
-								className={({ isActive }) =>
-									isActive ? 'text-white' : 'text-white/50'
-								}
-							>
-								Transactions
-							</NavLink>
-						</li>
-						<li>
-							<NavLink
-								to='/categories'
-								className={({ isActive }) =>
-									isActive ? 'text-white' : 'text-white/50'
-								}
-							>
-								Categories
-							</NavLink>
-						</li>
+						{routes.map((item, index) => (
+							<li key={index}>
+								<NavLink
+									to={item.path}
+									className={({ isActive }) =>
+										isActive ? 'text-white' : 'text-white/50'
+									}
+								>
+									{item.title}
+								</NavLink>
+							</li>
+						))}
 					</ul>
 				</nav>
 			)}
