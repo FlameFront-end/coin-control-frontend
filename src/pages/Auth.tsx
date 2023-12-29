@@ -75,7 +75,7 @@ const Auth: FC = () => {
 				setTokenToLocalStorage('token', data.token)
 				dispatch(login(data))
 				toast.success('You logged in.')
-				navigate('/')
+				navigate('/home')
 			}
 		} catch (err: any) {
 			const errorMessages = err.response?.data?.message

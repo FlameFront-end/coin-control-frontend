@@ -6,6 +6,8 @@ import ErrorPage from '../pages/ErrorPage.tsx'
 import Home from '../pages/Home.tsx'
 import Transactions from '../pages/Transactions.tsx'
 
+import ProtectedRoute from '../components/ProtectedRoute.tsx'
+
 import Layout from '../Layouts/Layout.tsx'
 
 export const routes = createBrowserRouter([
@@ -15,19 +17,31 @@ export const routes = createBrowserRouter([
 		errorElement: <ErrorPage />,
 		children: [
 			{
-				index: true,
-				element: <Home />
+				path: '/home',
+				element: (
+					<ProtectedRoute>
+						<Home />
+					</ProtectedRoute>
+				)
 			},
 			{
 				path: 'transactions',
-				element: <Transactions />
+				element: (
+					<ProtectedRoute>
+						<Transactions />
+					</ProtectedRoute>
+				)
 			},
 			{
 				path: 'categories',
-				element: <Categories />
+				element: (
+					<ProtectedRoute>
+						<Categories />
+					</ProtectedRoute>
+				)
 			},
 			{
-				path: 'auth',
+				path: '',
 				element: <Auth />
 			}
 		]

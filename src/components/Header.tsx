@@ -19,7 +19,7 @@ const Header: FC = () => {
 		dispatch(logout())
 		removeTokenFromLocalStorage('token')
 		toast.success('You logged out')
-		navigate('/auth')
+		navigate('/')
 	}
 
 	return (
