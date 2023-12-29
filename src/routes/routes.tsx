@@ -4,6 +4,7 @@ import Auth from '../pages/Auth.tsx'
 import Categories from '../pages/Categories.tsx'
 import ErrorPage from '../pages/ErrorPage.tsx'
 import Home from '../pages/Home.tsx'
+import Index from '../pages/Index.tsx'
 import Transactions from '../pages/Transactions.tsx'
 
 import ProtectedRoute from '../components/ProtectedRoute.tsx'
@@ -16,6 +17,10 @@ export const routes = createBrowserRouter([
 		element: <Layout />,
 		errorElement: <ErrorPage />,
 		children: [
+			{
+				index: true,
+				element: <Index />
+			},
 			{
 				path: '/home',
 				element: (
@@ -41,7 +46,7 @@ export const routes = createBrowserRouter([
 				)
 			},
 			{
-				path: '',
+				path: '/auth',
 				element: <Auth />
 			}
 		]
