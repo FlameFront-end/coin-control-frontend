@@ -19,7 +19,7 @@
 		@apply flex items-center gap-2 rounded-md px-4 py-2 text-sm text-white;
 	}
 	.input {
-		@apply rounded-md border bg-slate-700 bg-transparent p-2 outline-none placeholder:text-white focus:border-slate-300;
+		@apply rounded-md border bg-slate-700 bg-transparent p-2 outline-none placeholder:text-sm placeholder:text-white focus:border-slate-300;
 	}
 	.container {
 		@apply max-w-[1000px];
