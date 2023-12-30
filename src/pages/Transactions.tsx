@@ -5,10 +5,7 @@ import { toast } from 'react-toastify'
 
 import { instance } from '../api/axios.api.ts'
 
-import Chart from '../components/Chart.tsx'
-import TransactionForm from '../components/TransactionForm.tsx'
-import TransactionTable from '../components/TransactionTable.tsx'
-
+import { Chart, TransactionForm, TransactionTable } from '../components'
 import { formatToUSD } from '../helpers/currency.helper.ts'
 import {
 	ICategory,

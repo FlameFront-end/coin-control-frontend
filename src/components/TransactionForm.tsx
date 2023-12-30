@@ -4,7 +4,7 @@ import { Form, useLoaderData } from 'react-router-dom'
 
 import { IResponseTransactionLoader } from '../types/types.ts'
 
-import CategoryModal from './CategoryModal.tsx'
+import { CategoryModal } from './index.ts'
 
 const TransactionForm: FC = () => {
 	const { categories } = useLoaderData() as IResponseTransactionLoader

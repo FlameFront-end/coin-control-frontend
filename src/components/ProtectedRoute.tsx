@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react'
 
 import { useAuth } from '../hooks/useAuth.ts'
 
-import ErrorPage from '../pages/ErrorPage.tsx'
+import { ErrorPage } from '../pages'
 
 interface ProtectedRouteProps {
 	children: ReactNode

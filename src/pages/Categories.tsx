@@ -5,8 +5,7 @@ import { Form, useLoaderData } from 'react-router-dom'
 
 import { instance } from '../api/axios.api.ts'
 
-import CategoryModal from '../components/CategoryModal.tsx'
-
+import { CategoryModal } from '../components'
 import { ICategory } from '../types/types.ts'
 
 export const categoriesAction = async ({ request }: any) => {

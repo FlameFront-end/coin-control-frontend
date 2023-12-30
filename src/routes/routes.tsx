@@ -1,20 +1,14 @@
 import { createBrowserRouter } from 'react-router-dom'
 
-import Auth from '../pages/Auth.tsx'
-import Categories, {
-	categoriesAction,
-	categoriesLoader
-} from '../pages/Categories.tsx'
-import ErrorPage from '../pages/ErrorPage.tsx'
-import Home from '../pages/Home.tsx'
-import Transactions, {
+import { categoriesAction, categoriesLoader } from '../pages/Categories.tsx'
+import {
 	transactionsAction,
 	transactionsLoader
 } from '../pages/Transactions.tsx'
 
-import ProtectedRoute from '../components/ProtectedRoute.tsx'
-
+import { ProtectedRoute } from '../components'
 import Layout from '../Layouts/Layout.tsx'
+import { Auth, Categories, ErrorPage, Home, Transactions } from '../pages'
 
 export const routes = createBrowserRouter([
 	{
