@@ -26,5 +26,22 @@ export interface ICategory {
 	id: number
 	createdAt: string
 	updatedAt: string
-	transaction: []
+	transaction?: []
+}
+
+export interface ITransaction {
+	id: number
+	title: string
+	type: string
+	amount: number
+	createdAt: string
+	updatedAt: string
+	category: ICategory
+}
+
+export interface IResponseTransactionLoader {
+	categories: ICategory[]
+	transactions: ITransaction[]
+	totalIncome: number
+	totalExpense: number
 }

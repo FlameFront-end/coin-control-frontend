@@ -20,13 +20,14 @@ const CategoryModal: FC<CategoryModalProps> = ({
 				onSubmit={() => setVisibleModal(false)}
 				className='grid w-[400px] gap-2 rounded-md bg-slate-900 p-5'
 			>
-				<label htmlFor='title'>
-					<small>Category Title</small>
+				<label htmlFor='title' className='grid'>
+					<span className='mb-2'>Category Title</span>
 					<input
 						type='text'
 						name='title'
+						required
 						placeholder='Title...'
-						className='input w-full'
+						className='input my-2 w-full'
 					/>
 					<input type='hidden' name='id' value={id} />
 				</label>
