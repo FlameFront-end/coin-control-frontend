@@ -8,7 +8,11 @@ import { instance } from '../api/axios.api.ts'
 import { CategoryModal } from '../components'
 import { ICategory } from '../types/types.ts'
 
-export const categoriesAction: ActionFunction = async ({ request }) => {
+export const categoriesAction: ActionFunction = async ({
+	request
+}: {
+	request: Request
+}) => {
 	switch (request.method) {
 		case 'POST': {
 			const formData = await request.formData()
