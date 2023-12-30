@@ -1,14 +1,14 @@
 import { FC, useState } from 'react'
 import { AiFillCloseCircle, AiFillEdit } from 'react-icons/ai'
 import { FaPlus } from 'react-icons/fa'
-import { Form, useLoaderData } from 'react-router-dom'
+import { ActionFunction, Form, useLoaderData } from 'react-router-dom'
 
 import { instance } from '../api/axios.api.ts'
 
 import { CategoryModal } from '../components'
 import { ICategory } from '../types/types.ts'
 
-export const categoriesAction = async ({ request }: any) => {
+export const categoriesAction: ActionFunction = async ({ request }) => {
 	switch (request.method) {
 		case 'POST': {
 			const formData = await request.formData()
