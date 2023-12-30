@@ -24,10 +24,6 @@ const Header: FC = () => {
 
 	const routes = [
 		{
-			path: '/home',
-			title: 'Home'
-		},
-		{
 			path: '/transactions',
 			title: 'Transactions'
 		},
